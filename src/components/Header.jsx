@@ -37,9 +37,9 @@ const Header = () => {
         `}
       >
         <div className="px-4 md:px-6 max-w-7xl mx-auto relative flex items-center justify-between">
-          {/* --- LEFT SECTION --- */}
+          {/* left */}
           <div className="flex items-center gap-4 z-20">
-            {/* Mobile Hamburger (Visible below 900px) */}
+            {/* mobile hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="min-[900px]:hidden p-1 text-gray-300 hover:text-white transition-colors focus:outline-none"
@@ -51,14 +51,13 @@ const Header = () => {
               )}
             </button>
 
-            {/* Desktop Nav (Hidden below 900px) */}
             <nav className="hidden min-[900px]:flex items-center gap-8">
               <NavLinks onClick={closeMenu} />
             </nav>
           </div>
 
-          {/* --- MIDDLE SECTION --- */}
-          {/* Logo */}
+          {/* mid */}
+          {/* logo */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
             <div className="shrink-0 flex items-center">
               <Link to="/" onClick={closeMenu}>
@@ -72,31 +71,31 @@ const Header = () => {
             </div>
           </div>
 
-          {/* --- RIGHT SECTION --- */}
+          {/* right side*/}
           <div className="flex items-center gap-4 z-20">
-            {/* SEARCH TRIGGER BUTTON */}
+            {/* search btn*/}
             <button
               onClick={toggleSearch}
               className={`
-                w-11 h-11 rounded-full border flex items-center justify-center transition-all duration-300
+                w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 
+                backdrop-blur-xl border shadow-lg
                 ${
                   searchOpen
-                    ? "bg-red-600 border-red-500 text-white rotate-90"
-                    : "bg-white border-white/10 text-black hover:bg-red-600 hover:border-red-500 hover:text-white"
+                    ? "bg-red-600/80 border-red-500 text-white rotate-90 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
+                    : "bg-gradient-to-br from-white/10 to-white/5 border-white/10 text-gray-200 hover:bg-white/10 hover:border-white/30 hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                 }
               `}
             >
               {searchOpen ? <X size={18} /> : <Search size={18} />}
             </button>
 
-            {/* Sign Up Button (Hidden below 900px) */}
             <div className="hidden min-[900px]:block">
               <SignUpButton />
             </div>
           </div>
         </div>
 
-        {/* --- SEARCH BAR DROPDOWN --- */}
+        {/* search bar drop down */}
         <div
           className={`
             absolute top-full left-0 w-full bg-transparent border-b border-white/0
@@ -115,7 +114,6 @@ const Header = () => {
                 size={20}
               />
 
-              {/* LIQUID GLASS INPUT FIELD */}
               <input
                 type="text"
                 placeholder="What do you want to learn?"
@@ -156,13 +154,13 @@ const Header = () => {
         </div>
       </header>
 
-      {/* Spacer */}
+      {/* spacer */}
       <div className="h-24" />
     </>
   );
 };
 
-// --- Sub Components ---
+// --- sub components ---
 
 const NavLinks = ({ onClick }) => (
   <>
