@@ -82,7 +82,7 @@ const Header = () => {
                 ${
                   searchOpen
                     ? "bg-red-600/80 border-red-500 text-white rotate-90 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
-                    : "bg-gradient-to-br from-white/10 to-white/5 border-white/10 text-gray-200 hover:bg-white/10 hover:border-white/30 hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                    : "bg-linear-to-br from-white/10 to-white/5 border-white/10 text-gray-200 hover:bg-white/10 hover:border-white/30 hover:text-white hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                 }
               `}
             >
