@@ -1,1 +1,80 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #0f0f10;
+  --font-dm-sans: DM Sans, sans-serif;
+  --breakpoint-xs: 480px;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+  background: black;
+  color: white;
+  overflow-x: hidden; /* Prevent horizontal scroll from blobs */
+}
+
+/* --- Utilities --- */
+
+@utility animate-blob {
+  animation: blob 10s infinite;
+}
+
+@utility animation-delay-2000 {
+  animation-delay: 2s;
+}
+@utility animation-delay-4000 {
+  animation-delay: 4s;
+}
+@utility animation-delay-5000 {
+  animation-delay: 5s;
+}
+
+/* --- Keyframes --- */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* --- Liquid Glass Effect --- */
+:root {
+  --c-glass: #bbbbbc;
+  --c-light: #fff;
+  --c-dark: #000;
+  --glass-reflex-light: 1;
+  --glass-reflex-dark: 1;
+  --saturation: 110%;
+}
+
+.liquid-glass-card {
+  background-color: color-mix(in srgb, var(--c-glass) 5%, transparent);
+  backdrop-filter: blur(12px) saturate(var(--saturation));
+  -webkit-backdrop-filter: blur(12px) saturate(var(--saturation));
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* Complex shadows for the "Liquid" depth feel */
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 2px 3px 0px -2px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 0px -2px rgba(255, 255, 255, 0.1),
+    0px 4px 20px -8px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.liquid-glass-card:hover {
+  background-color: color-mix(in srgb, var(--c-glass) 10%, transparent);
+  border-color: rgba(220, 38, 38, 0.3); /* Red tint on hover */
+  transform: translateY(-5px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+    0px 10px 30px -10px rgba(220, 38, 38, 0.2);
+}
