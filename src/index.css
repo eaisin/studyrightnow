@@ -29,7 +29,7 @@ body {
   animation-delay: 5s;
 }
 
-/* --- Keyframes --- */
+/* keyframes */
 @keyframes blob {
   0% {
     transform: translate(0px, 0px) scale(1);
@@ -45,7 +45,7 @@ body {
   }
 }
 
-/* --- Liquid Glass Effect --- */
+/* liquid glass effect */
 :root {
   --c-glass: #bbbbbc;
   --c-light: #fff;
@@ -62,7 +62,6 @@ body {
 
   border: 1px solid rgba(255, 255, 255, 0.1);
 
-  /* Complex shadows for the "Liquid" depth feel */
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1),
     inset 2px 3px 0px -2px rgba(255, 255, 255, 0.2),
     inset -2px -2px 0px -2px rgba(255, 255, 255, 0.1),
