@@ -14,7 +14,7 @@ const CourseCard = ({
 }) => {
   const isBeginner = level === "Beginner";
 
-  // Shared "Liquid Glass" class for reuse
+  // liquid glass f
   const glassStyle =
     "bg-white/5 backdrop-blur-xl border border-white/10 shadow-lg";
 
@@ -28,7 +28,7 @@ const CourseCard = ({
           {/* level */}
           <div
             className={`
-              ${glassStyle} px-3 py-1.5 sm:px-4 sm:py-2 rounded-full flex items-center gap-2 w-fit cursor-default
+              ${glassStyle} px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl flex items-center gap-2 w-fit cursor-default
             `}
           >
             <div

@@ -20,8 +20,6 @@ const AnimatedBtn = ({ to, children, className = "", ...props }) => {
     hover:before:scale-150
   `;
 
-  // twMerge intelligently combines the default classes with your custom ones
-  // It effectively replaces 'px-10' with 'px-6' cleanly
   const finalClass = twMerge(baseClasses, className);
 
   if (to) {

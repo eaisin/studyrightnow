@@ -1,4 +1,3 @@
-import { ArrowRight, Sparkles } from "lucide-react";
 import AnimatedBtn from "../components/AnimatedBtn";
 import { homeData } from "../data/home";
 import CourseCard from "../components/CourseCard";
@@ -11,8 +10,8 @@ const Home = () => {
     <div className="text-white selection:bg-red-500 selection:text-white">
       {/* hero */}
       <section className="pt-20 pb-20 px-4 md:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
-        <h1 className="max-w-6xl mx-auto font-extrabold tracking-tight mb-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-3">
+        <div className="max-w-6xl mx-auto font-extrabold tracking-tight mb-8">
+          <div className="flex flex-row items-center justify-center gap-2 md:gap-4 mb-3">
             {/* title 1 */}
             <span className="text-4xl md:text-5xl lg:text-6xl text-white whitespace-nowrap">
               {hero.title.line1}
@@ -29,7 +28,7 @@ const Home = () => {
             <span className="text-red-600">{hero.title.line3Brand}</span>{" "}
             {hero.title.line3Suffix}
           </span>
-        </h1>
+        </div>
 
         {/* description */}
         <p className="max-w-3xl mt-4 mx-auto text-lg text-white leading-loose font-light mb-12">
@@ -62,7 +61,7 @@ const Home = () => {
         {/* headeer */}
         <div className="mb-12 pb-10 text-center">
           <h1 className="text-3xl md:text-5xl font-semibold text-white tracking-tight">
-            Courses on
+            Courses on{" "}
             <span className="text-red-500 font-bold">Study Right Now</span>
           </h1>
         </div>
