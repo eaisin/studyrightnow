@@ -10,7 +10,7 @@ const Header = () => {
 
   // Scroll effect
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
+    const handleScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <>
-      {/* Sticky Header Wrapper */}
+      {/* sticky wrapper */}
       <header
         className={`
           fixed top-0 left-0 w-full z-50 
@@ -117,18 +117,18 @@ const Header = () => {
               <input
                 type="text"
                 placeholder="What do you want to learn?"
-                className="
-                          w-full 
-                          bg-linear-to-br from-white/10 via-white/5 to-white/0 
-                          backdrop-blur-2xl 
-                          border border-white/20 
-                          rounded-full 
-                          py-4 pl-14 pr-6 
-                          text-white placeholder-gray-400 
-                          shadow-lg shadow-black/10
-                          focus:outline-none focus:border-red-500/50 focus:shadow-red-900/20
-                          transition-all duration-300
-                        "
+                className={`
+                  w-full 
+                  bg-black/80
+                  backdrop-blur-3xl
+                  border border-white/10 
+                  rounded-full 
+                  py-4 pl-14 pr-6 
+                  text-white placeholder-gray-400 
+                  shadow-[inset_0_2px_4px_rgba(255,255,255,0.05)]
+                  focus:outline-none focus:bg-white/10 focus:border-red-500/30 focus:shadow-[0_0_20px_rgba(220,38,38,0.1)]
+                  transition-all duration-300
+                  `}
                 autoFocus={searchOpen}
               />
             </div>
