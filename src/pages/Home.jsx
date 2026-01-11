@@ -11,14 +11,14 @@ const Home = () => {
       {/* hero */}
       <section className="pt-20 pb-20 px-4 md:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="max-w-6xl mx-auto font-extrabold tracking-tight mb-8">
-          <div className="flex flex-row items-center justify-center gap-2 md:gap-4 mb-3">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-3 text-center">
             {/* title 1 */}
-            <span className="text-4xl md:text-5xl lg:text-6xl text-white whitespace-nowrap">
+            <span className="text-4xl md:text-5xl lg:text-6xl text-white md:whitespace-nowrap">
               {hero.title.line1}
             </span>
 
             {/* title 2 */}
-            <span className="text-2xl md:text-3xl lg:text-4xl bg-clip-text text-white leading-relaxed py-2 whitespace-nowrap">
+            <span className="text-2xl md:text-3xl lg:text-4xl bg-clip-text text-white leading-relaxed py-2 md:whitespace-nowrap">
               {hero.title.line2}
             </span>
           </div>
